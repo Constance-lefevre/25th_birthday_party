@@ -1,0 +1,269 @@
+// latest version for Charly sur marne//
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fête de Constance - Infos & Confirmation</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/12939e6e00.js" crossorigin="anonymous"></script>
+
+  <!-- CSS intégré avec nouvelles couleurs -->
+  <style>
+    body {
+      font-family: 'Noto Serif', serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #intro {
+      text-align: center;
+    }
+
+    h1, h2, h3, h4, p {
+      margin: 10px 0;
+    }
+
+    .card-white {
+      max-width: 900px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    section, .summary, #intro {
+      background: white;
+      border: 2px solid #ffeaea; /* updated */
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 100%;
+      max-width: 600px;
+      box-sizing: border-box;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn-pill {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 50px;
+      background-color: #6b0b14; /* updated */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .btn-pill:hover {
+      background-color: #40060c; /* darker hover */
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .lang-switcher button {
+      border: none;
+      background: #ffeaea; /* updated */
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .lang-switcher button.active {
+      background: #6b0b14; /* updated */
+      color: white;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      border: 2px solid #ffeaea; /* updated */
+    }
+
+    .carousel-item img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Switcher langue -->
+  <div id="lang-switcher" class="lang-switcher">
+    <button data-lang="fr" class="active">FR</button>
+    <button data-lang="eng">ENG</button>
+  </div>
+
+  <!-- Introduction -->
+  <div class="card-white" id="intro">
+    <h1>
+      <span class="lang-fr">Constance fête ses 25 tours de soleil 🎉</span>
+      <span class="lang-eng" style="display:none;">Constance celebrates her 25th trip around the sun 🎉</span>
+    </h1>
+    <h4>
+      <span class="lang-fr">Attention, si vous recevez ce lien, vous êtes considérés comme ... la crème de la crème.</span>
+      <span class="lang-eng" style="display:none;">Attention, if you received this link, you are considered... the cream of the crop.</span>
+    </h4>
+    <p>
+      <span class="lang-fr">Je vous invite à célébrer mes 25 ans lors d’une fête pleine de rires, de musique et de souvenirs !</span>
+      <span class="lang-eng" style="display:none;">I invite you to celebrate my 25th birthday with laughter, music, and unforgettable memories!</span>
+    </p>
+
+    <!-- Section 1: Résumé infos + bouton confirmation -->
+    <section id="resume-infos">
+      <div class="summary">
+        <p>
+          <strong>
+            <span class="lang-fr">Date :</span>
+            <span class="lang-eng" style="display:none;">Date:</span>
+          </strong>
+          <span class="lang-fr">25 avril 2025</span>
+          <span class="lang-eng" style="display:none;">April 25, 2025</span>
+        </p>
+        <p>
+          <strong>
+            <span class="lang-fr">Heure :</span>
+            <span class="lang-eng" style="display:none;">Time:</span>
+          </strong>
+          <span class="lang-fr">À partir de 19h00</span>
+          <span class="lang-eng" style="display:none;">From 7 PM</span>
+        </p>
+        <p>
+          <strong>
+            <span class="lang-fr">Lieu :</span>
+            <span class="lang-eng" style="display:none;">Location:</span>
+          </strong>
+          <span class="lang-fr">Charly-sur-Marne, France</span>
+          <span class="lang-eng" style="display:none;">Charly-sur-Marne, France</span>
+        </p>
+        <p>
+          <a href="https://maps.app.goo.gl/jvSM8ca4PrxFhucQ7" target="_blank" rel="noopener">
+            <span class="lang-fr">Voir sur Google Maps</span>
+            <span class="lang-eng" style="display:none;">View on Google Maps</span>
+          </a>
+        </p>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/TON_ID_DE_FORMULAIRE/viewform" target="_blank" class="btn-pill" rel="noopener">
+        <span class="lang-fr">Je confirme ma présence</span>
+        <span class="lang-eng" style="display:none;">I confirm my attendance</span>
+      </a>
+    </section>
+
+    <!-- Section 2: Lieu -->
+    <section id="lieu-photos">
+      <h2>
+        <span class="lang-fr">Le lieu</span>
+        <span class="lang-eng" style="display:none;">The location</span>
+      </h2>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-item"><img src="image1.jpg" alt="Salon du lieu" /></div>
+          <div class="carousel-item"><img src="image2.jpg" alt="Cuisine équipée" /></div>
+          <div class="carousel-item"><img src="image3.jpg" alt="Chambre confortable" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Invitation Airbnb -->
+    <section id="invitation-airbnb">
+      <h2>
+        <span class="lang-fr">Invitation Airbnb</span>
+        <span class="lang-eng" style="display:none;">Airbnb Invitation</span>
+      </h2>
+      <p>
+        <span class="lang-fr">Cliquez sur le bouton ci-dessous pour voir l’annonce Airbnb du lieu de la fête.</span>
+        <span class="lang-eng" style="display:none;">Click the button below to see the Airbnb listing for the party location.</span>
+      </p>
+      <a href="https://www.airbnb.com/l/p10c04fF?s=67&unique_share_id=1676e4a2-e953-4407-90eb-bded06360dff" target="_blank" class="btn-pill" rel="noopener">
+        <span class="lang-fr">Voir l'invitation Airbnb</span>
+        <span class="lang-eng" style="display:none;">View Airbnb Invitation</span>
+      </a>
+    </section>
+
+    <!-- Section 3: Comment s'y rendre -->
+    <section id="comment-rendre">
+      <h2>
+        <span class="lang-fr">Comment s’y rendre</span>
+        <span class="lang-eng" style="display:none;">How to get there</span>
+      </h2>
+      <div class="transport">
+        <h3>
+          <span class="lang-fr">En voiture</span>
+          <span class="lang-eng" style="display:none;">By car</span>
+        </h3>
+        <ul>
+          <li>
+            <span class="lang-fr">Depuis Paris : XXXXX.</span>
+            <span class="lang-eng" style="display:none;">From Paris: XXXXX (about 1h30).</span>
+          </li>
+          <li>
+            <span class="lang-fr">Parking disponible sur place.</span>
+            <span class="lang-eng" style="display:none;">Parking available on site.</span>
+          </li>
+        </ul>
+        <h3>
+          <span class="lang-fr">En transport en commun</span>
+          <span class="lang-eng" style="display:none;">By public transport</span>
+        </h3>
+        <ul>
+          <li>
+            <span class="lang-fr">Train depuis Paris XXXX.</span>
+            <span class="lang-eng" style="display:none;">Train from Paris XXXX.</span>
+          </li>
+          <li>
+            <span class="lang-fr">Bus local ou taxi depuis la gare jusqu’au lieu de la fête.</span>
+            <span class="lang-eng" style="display:none;">Local bus or taxi from the station to the party location.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 4: Bouton confirmation -->
+    <section id="confirmation-bas">
+      <a href="https://docs.google.com/forms/d/e/TON_ID_DE_FORMULAIRE/viewform" target="_blank" class="btn-pill" rel="noopener">
+        <span class="lang-fr">Je confirme ma présence</span>
+        <span class="lang-eng" style="display:none;">I confirm my attendance</span>
+      </a>
+    </section>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('#lang-switcher button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        if(lang === 'fr') {
+          document.querySelectorAll('.lang-fr').forEach(el => el.style.display = '');
+          document.querySelectorAll('.lang-eng').forEach(el => el.style.display = 'none');
+        } else {
+          document.querySelectorAll('.lang-fr').forEach(el => el.style.display = 'none');
+          document.querySelectorAll('.lang-eng').forEach(el => el.style.display = '');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
