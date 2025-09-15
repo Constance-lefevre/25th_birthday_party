@@ -1,0 +1,92 @@
+body {
+  font-family: 'Noto Serif', serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#intro {
+  text-align: center;
+}
+
+h1, h2, h3, h4, p {
+  margin: 10px 0;
+}
+
+.card-white {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section, .summary, #intro {
+  background: white;
+  border: 2px solid #ffeaea;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-pill {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background-color: #6b0b14;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-pill:hover {
+  background-color: #40060c;
+}
+
+.lang-switcher {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.lang-switcher button {
+  border: none;
+  background: #ffeaea;
+  padding: 10px 20px;
+  margin: 5px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lang-switcher button.active {
+  background: #6b0b14;
+  color: white;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid #ffeaea;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
