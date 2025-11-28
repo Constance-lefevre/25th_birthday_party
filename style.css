@@ -77,12 +77,23 @@ section, .summary, #intro {
 }
 
 .carousel-container {
+  position: relative;
   overflow: hidden;
   width: 100%;
   max-width: 500px;
   margin: auto;
   border-radius: 10px;
   border: 2px solid #ffeaea;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-item img {
