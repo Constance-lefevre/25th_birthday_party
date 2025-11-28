@@ -65,13 +65,12 @@
     </section>
 
     <!-- Section 2: Lieu -->
-  <section id="lieu-photos">
+<section id="lieu-photos">
   <h2>
     <span class="lang-fr">Le lieu</span>
     <span class="lang-eng" style="display:none;">The location</span>
   </h2>
   <div class="carousel-container">
-    <button class="carousel-btn prev">❮</button>
     <div class="carousel-track">
       <div class="carousel-item">
         <img src="BAC Guinguette - Charly sur marne/Exterieur 1.avif" alt="Espaces extérieurs" />
@@ -86,10 +85,8 @@
         <img src="BAC Guinguette - Charly sur marne/Exterieur 2.avif" alt="Jardin extérieur" />
       </div>
     </div>
-    <button class="carousel-btn next">❯</button>
   </div>
 </section>
-
 
     <!-- Section Invitation Airbnb -->
     <section id="invitation-airbnb">
@@ -137,6 +134,7 @@
   </div>
 
 <script>
+<script>
   // --- Script langue ---
   const buttons = document.querySelectorAll('#lang-switcher button');
   buttons.forEach(button => {
@@ -155,11 +153,9 @@
     });
   });
 
-  // --- Script carrousel ---
+  // --- Carrousel auto ---
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(document.querySelectorAll('.carousel-item'));
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
 
   let currentIndex = 0;
 
@@ -168,20 +164,17 @@
     track.style.transform = `translateX(-${currentIndex * width}px)`;
   }
 
-  nextBtn.addEventListener('click', () => {
+  function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
     updateCarousel();
-  });
+  }
 
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
-
-  window.addEventListener('resize', updateCarousel);
-
-  // Positionne correctement le carrousel au chargement
+  // position au chargement
   updateCarousel();
+
+  // défilement automatique toutes les 3 secondes (3000 ms)
+  setInterval(nextSlide, 3000);
+</script>
 </script>
 </script>
 </body>
