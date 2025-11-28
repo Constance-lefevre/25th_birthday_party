@@ -176,9 +176,9 @@
       </h2>
       <div class="carousel-container">
         <div class="carousel-track">
-          <div class="carousel-item"><img src="image1.jpg" alt="Salon du lieu" /></div>
-          <div class="carousel-item"><img src="image2.jpg" alt="Cuisine équipée" /></div>
-          <div class="carousel-item"><img src="image3.jpg" alt="Chambre confortable" /></div>
+          <div class="carousel-item"><img src=""C:\Users\const\Desktop\Birthday\BAC Guinguette - Charly sur marne\Salle de réception.avif" alt="Salon du lieu" /></div>
+          <div class="carousel-item"><img src=""C:\Users\const\Desktop\Birthday\BAC Guinguette - Charly sur marne\Exterieur Tables.avif"" alt="Jardin" /></div>
+          <div class="carousel-item"><img src=""C:\Users\const\Desktop\Birthday\BAC Guinguette - Charly sur marne\Exterieur 1.avif" alt="Espaces exterieurs" /></div>
         </div>
       </div>
     </section>
