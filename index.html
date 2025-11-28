@@ -74,16 +74,16 @@
     <button class="carousel-btn prev">&#10094;</button>
     <div class="carousel-track">
       <div class="carousel-item">
-        <img src="C:\Users\const\Desktop\Birthday\BAC Guinguette - Charly sur marne\Exterieur 1.avif" alt="Espaces extérieurs" />
+        <img src="images\Exterieur 1.avif" alt="Espaces extérieurs" />
       </div>
       <div class="carousel-item">
-        <img src="C:\Users\const\Desktop\Birthday\BAC Guinguette - Charly sur marne\Salle de réception.avif" alt="Lieu de réception" />
+        <img src="images\Salle de réception.avif" alt="Lieu de réception" />
       </div>
       <div class="carousel-item">
-        <img src="C:\Users\const\Desktop\Birthday\BAC Guinguette - Charly sur marne\Exterieur 2.avif" alt="Jardin" />
+        <img src="images\Exterieur Tables.avif" alt="Jardin" />
       </div>
       <div class="carousel-item">
-        <img src=""C:\Users\const\Desktop\Birthday\BAC Guinguette - Charly sur marne\Exterieur 2.avif"" alt="Espaces extérieurs" />
+        <img src="images\Exterieur 2.avif" alt="Espaces extérieurs" />
       </div>
     </div>
     <button class="carousel-btn next">&#10095;</button>
@@ -136,23 +136,49 @@
     </section>
   </div>
 
-  <script>
-    const buttons = document.querySelectorAll('#lang-switcher button');
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const lang = button.getAttribute('data-lang');
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+<script>
+  // --- Script langue ---
+  const buttons = document.querySelectorAll('#lang-switcher button');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const lang = button.getAttribute('data-lang');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
 
-        if(lang === 'fr') {
-          document.querySelectorAll('.lang-fr').forEach(el => el.style.display = '');
-          document.querySelectorAll('.lang-eng').forEach(el => el.style.display = 'none');
-        } else {
-          document.querySelectorAll('.lang-fr').forEach(el => el.style.display = 'none');
-          document.querySelectorAll('.lang-eng').forEach(el => el.style.display = '');
-        }
-      });
+      if (lang === 'fr') {
+        document.querySelectorAll('.lang-fr').forEach(el => el.style.display = '');
+        document.querySelectorAll('.lang-eng').forEach(el => el.style.display = 'none');
+      } else {
+        document.querySelectorAll('.lang-fr').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.lang-eng').forEach(el => el.style.display = '');
+      }
     });
-  </script>
+  });
+
+  // --- Script carrousel ---
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(document.querySelectorAll('.carousel-item'));
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const width = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * width}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', updateCarousel);
+</script>
 </body>
 </html>
