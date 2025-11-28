@@ -78,7 +78,7 @@ section, .summary, #intro {
 
 .carousel-container {
   position: relative;
-  overflow: hidden;
+  overflow: hidden;          /* Cache les autres images */
   width: 100%;
   max-width: 500px;
   margin: auto;
@@ -87,12 +87,12 @@ section, .summary, #intro {
 }
 
 .carousel-track {
-  display: flex;
+  display: flex;             /* Met les slides côte à côte */
   transition: transform 0.4s ease-in-out;
 }
 
 .carousel-item {
-  min-width: 100%;
+  min-width: 100%;           /* Une slide = 100% de la largeur visible */
   box-sizing: border-box;
 }
 
