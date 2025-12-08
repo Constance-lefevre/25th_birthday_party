@@ -4,17 +4,14 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-}
-
-#intro {
-  text-align: center;
+  justify-content: center;      /* centre la carte sur l’écran */
 }
 
 h1, h2, h3, h4, p {
   margin: 10px 0;
 }
 
+/* Carte principale */
 .card-white {
   max-width: 900px;
   width: 100%;
@@ -23,8 +20,10 @@ h1, h2, h3, h4, p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 60px 16px 40px;       /* marge en haut pour laisser la place au switch langue */
 }
 
+/* Blocs internes */
 section, .summary, #intro {
   background: white;
   border: 2px solid #ffeaea;
@@ -38,6 +37,7 @@ section, .summary, #intro {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+/* Bouton pill */
 .btn-pill {
   display: inline-block;
   padding: 12px 20px;
@@ -54,21 +54,24 @@ section, .summary, #intro {
   background-color: #40060c;
 }
 
+/* SWITCH LANGUE EN HAUT À DROITE, NE POUSSE PLUS LE TEXTE */
 .lang-switcher {
+  position: fixed;              /* hors du flux, donc ne décale pas le contenu */
+  top: 10px;
+  right: 10px;
   display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  gap: 8px;
+  z-index: 1000;
 }
 
 .lang-switcher button {
   border: none;
   background: #ffeaea;
-  padding: 10px 20px;
-  margin: 5px;
-  height: 50px;
-  border-radius: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .lang-switcher button.active {
@@ -76,6 +79,7 @@ section, .summary, #intro {
   color: white;
 }
 
+/* CARROUSEL */
 .carousel-container {
   position: relative;
   overflow: hidden;          /* Cache les autres images */
@@ -100,4 +104,30 @@ section, .summary, #intro {
   width: 100%;
   display: block;
   border-radius: 10px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 600px) {
+  .card-white {
+    margin: 70px 10px 20px;  /* un peu plus de marge en haut pour le switch langue */
+    padding: 16px;
+  }
+
+  section, .summary, #intro {
+    padding: 16px;
+    margin: 16px auto;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn-pill {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
 }
