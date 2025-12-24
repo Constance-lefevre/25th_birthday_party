@@ -55,6 +55,7 @@ section, .summary, #intro {
 
 #spotify-section .spotify-embed {
   margin-top: 10px;
+  padding: 20px
 }
 .spotify-subtitle .ligne-1,
 .spotify-subtitle .ligne-2 {
