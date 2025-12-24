@@ -56,6 +56,15 @@ section, .summary, #intro {
 #spotify-section .spotify-embed {
   margin-top: 10px;
 }
+.spotify-subtitle .ligne-1,
+.spotify-subtitle .ligne-2 {
+  display: block;
+}
+
+.spotify-subtitle {
+  margin: 10px 0;
+  font-weight: normal;
+}
 
 .btn-pill {
   display: inline-block;
