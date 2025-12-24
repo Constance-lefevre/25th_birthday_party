@@ -37,6 +37,16 @@ section, .summary, #intro {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+/* Enlever les puces uniquement dans la section "comment-rendre" */
+#comment-rendre ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#comment-rendre li {
+  margin-bottom: 4px;
+}
 
 .btn-pill {
   display: inline-block;
