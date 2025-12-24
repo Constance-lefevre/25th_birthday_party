@@ -61,6 +61,11 @@ section, .summary, #intro {
 .spotify-subtitle {
   margin: 10px 0;
   font-weight: normal;
+  text-align: center;
+}
+
+.spotify-subtitle span {
+  display: block;   /* chaque ligne sur sa propre ligne */
 }
 
 .btn-pill {
