@@ -38,12 +38,7 @@ section, .summary, #intro {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 /* Enlever les puces uniquement dans la section "comment-rendre" */
-/* Liste avec flèches dans la section Comment s'y rendre */
-#comment-rendre ul {
-  list-style: none;        /* enlève les puces par défaut */
-  padding-left: 0;
-  margin: 0;
-}
+
 
 #comment-rendre li {
   position: relative;
